@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-toss-blue: #0064FF;
+  --color-toss-lightBlue: #E8F3FF;
+  --color-toss-gray-50: #F9FAFB;
+  --color-toss-gray-100: #F2F4F6;
+  --color-toss-gray-200: #E5E8EB;
+  --color-toss-gray-300: #D1D6DB;
+  --color-toss-gray-400: #B0B8C1;
+  --color-toss-gray-500: #8B95A1;
+  --color-toss-gray-600: #6B7684;
+  --color-toss-gray-700: #4E5968;
+  --color-toss-gray-800: #333D4B;
+  --color-toss-gray-900: #191F28;
+
+  --radius-toss: 16px;
+
+  --font-sans: "Toss Product Sans", "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+}
+
+/* Base styles using @layer base equivalent in pure CSS if needed, 
+   but utility classes on body is preferred or standard CSS selector */
+
+body {
+  background-color: white;
+  color: var(--color-toss-gray-900);
+  font-family: var(--font-sans);
+}
+
+/* Safe area for mobile */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
